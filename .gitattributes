@@ -1,2 +1,23 @@
+# PyTorch models
 *.pt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+
+# TensorFlow / Keras models
 *.keras filter=lfs diff=lfs merge=lfs -text
+*.h5 filter=lfs diff=lfs merge=lfs -text
+
+# Checkpoints
+*.ckpt filter=lfs diff=lfs merge=lfs -text
+
+# ONNX models
+*.onnx filter=lfs diff=lfs merge=lfs -text
+
+# Pickle files (often used for scikit-learn or PyTorch)
+*.pkl filter=lfs diff=lfs merge=lfs -text
+
+# NumPy arrays
+*.npy filter=lfs diff=lfs merge=lfs -text
+*.npz filter=lfs diff=lfs merge=lfs -text
+
+# Other large binaries
+*.bin filter=lfs diff=lfs merge=lfs -text
