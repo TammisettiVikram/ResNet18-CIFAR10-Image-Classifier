@@ -114,19 +114,19 @@ tf_model.load()
 # -------------------------
 def predict_image(image, backend):
     if image is None:
-        return {"Error": 1.0}
+        raise gr.Error("Please upload an image")
 
     if isinstance(image, np.ndarray):
         image = Image.fromarray(image)
 
-    try:
-        if backend == "PyTorch":
-            return pytorch_model.predict_top5(image)
-        else:
-            return tf_model.predict_top5(image)
+    if backend == "PyTorch":
+        return pytorch_model.predict_top5(image)
 
-    except Exception as e:
-        return {"Error": 1.0}
+    elif backend == "TensorFlow":
+        return tf_model.predict_top5(image)
+
+    else:
+        raise gr.Error("Invalid backend selected")
 
 
 # -------------------------
