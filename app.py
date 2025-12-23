@@ -115,7 +115,7 @@ def predict_image(image, backend):
             return tf_model.predict_top5(image)
 
     except Exception as e:
-    raise e
+        raise e
 
 # -------------------------
 # Gradio UI
