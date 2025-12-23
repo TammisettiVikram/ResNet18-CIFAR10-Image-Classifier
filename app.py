@@ -73,6 +73,16 @@ class TensorFlowCIFAR10Model:
     def __init__(self):
         self.model = None
 
+    def load(self):
+        try:
+            self.model = tf.keras.models.load_model(
+                "models/tensorflow/cifar10_cnn.keras"
+            )
+            print("✅ TensorFlow model loaded successfully")
+        except Exception as e:
+            print("❌ TensorFlow model load failed:", e)
+            self.model = None
+
     def predict_top5(self, image: Image.Image):
         if self.model is None:
             raise RuntimeError("TensorFlow model not loaded")
@@ -88,6 +98,7 @@ class TensorFlowCIFAR10Model:
             CLASS_NAMES[idx]: float(probs[idx])
             for idx in top5_idx
         }
+
 
 # -------------------------
 # Load Models (Global)
