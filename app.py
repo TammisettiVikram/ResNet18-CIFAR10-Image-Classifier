@@ -86,7 +86,7 @@ class TensorFlowCIFAR10Model:
         if self.model is None:
             raise RuntimeError("TensorFlow model not loaded")
 
-        img = image.resize((32, 32))
+        img = image.convert("RGB").resize((32, 32))
         arr = np.array(img).astype("float32") / 255.0
         arr = np.expand_dims(arr, axis=0)
 
