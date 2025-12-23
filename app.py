@@ -73,15 +73,6 @@ class TensorFlowCIFAR10Model:
     def __init__(self):
         self.model = None
 
-    def load(self):
-        try:
-            self.model = tf.keras.models.load_model(TF_MODEL_PATH)
-            print("✅ TensorFlow model loaded successfully")
-
-        except Exception as e:
-            print("❌ TensorFlow model load failed:", e)
-            self.model = None
-
     def predict_top5(self, image: Image.Image):
         if self.model is None:
             raise RuntimeError("TensorFlow model not loaded")
@@ -124,8 +115,7 @@ def predict_image(image, backend):
             return tf_model.predict_top5(image)
 
     except Exception as e:
-        print("❌ Prediction error:", e)
-        return {"Error": 1.0}
+    raise e
 
 # -------------------------
 # Gradio UI
