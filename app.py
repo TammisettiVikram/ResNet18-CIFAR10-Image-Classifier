@@ -87,17 +87,26 @@ class TensorFlowCIFAR10Model:
         if self.model is None:
             raise RuntimeError("TensorFlow model not loaded")
 
-        img = image.convert("RGB").resize((32, 32))
-        arr = np.array(img).astype("float32") / 255.0
-        arr = np.expand_dims(arr, axis=0)
+        try:
+            img = image.convert("RGB").resize((32, 32))
+            arr = np.array(img).astype("float32") / 255.0
+            arr = np.expand_dims(arr, axis=0)
 
-        probs = self.model.predict(arr, verbose=0)[0]
-        top5_idx = np.argsort(probs)[-5:][::-1]
+            probs = self.model.predict(arr, verbose=0)
+            
+            # Handle case where model returns nested array
+            if probs.ndim > 1:
+                probs = probs[0]
+            
+            top5_idx = np.argsort(probs)[-5:][::-1]
 
-        return {
-            CLASS_NAMES[idx]: float(probs[idx])
-            for idx in top5_idx
-        }
+            return {
+                CLASS_NAMES[idx]: float(probs[idx])
+                for idx in top5_idx
+            }
+        except Exception as e:
+            print(f"❌ TensorFlow prediction error: {e}")
+            raise gr.Error(f"TensorFlow prediction failed: {str(e)}")
 
 
 # -------------------------

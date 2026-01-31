@@ -1,0 +1,145 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "gradio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "gradio",
+        "description": "gradio",
+        "detail": "gradio",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "torchvision.transforms",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchvision.transforms",
+        "description": "torchvision.transforms",
+        "detail": "torchvision.transforms",
+        "documentation": {}
+    },
+    {
+        "label": "torchvision.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchvision.models",
+        "description": "torchvision.models",
+        "detail": "torchvision.models",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "PyTorchResNetModel",
+        "kind": 6,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "class PyTorchResNetModel:\n    def __init__(self):\n        self.model = None\n        self.transform = T.Compose([\n            T.Resize((224, 224)),\n            T.ToTensor(),\n            T.Normalize(\n                mean=[0.485, 0.456, 0.406],\n                std=[0.229, 0.224, 0.225],\n            ),",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "TensorFlowCIFAR10Model",
+        "kind": 6,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "class TensorFlowCIFAR10Model:\n    def __init__(self):\n        self.model = None\n    def load(self):\n        try:\n            self.model = tf.keras.models.load_model(\n                \"models/tensorflow/cifar10_cnn.keras\"\n            )\n            print(\"✅ TensorFlow model loaded successfully\")\n        except Exception as e:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "predict_image",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def predict_image(image, backend):\n    if image is None:\n        raise gr.Error(\"Please upload an image\")\n    if isinstance(image, np.ndarray):\n        image = Image.fromarray(image)\n    if backend == \"PyTorch\":\n        return pytorch_model.predict_top5(image)\n    elif backend == \"TensorFlow\":\n        return tf_model.predict_top5(image)\n    else:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "PYTORCH_MODEL_PATH",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "PYTORCH_MODEL_PATH = \"models/pytorch/resnet18_cifar10.pt\"\nTF_MODEL_PATH = \"models/tensorflow/cifar10_cnn.keras\"\nCLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\n# -------------------------\n# PyTorch Model Wrapper\n# -------------------------\nclass PyTorchResNetModel:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "TF_MODEL_PATH",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "TF_MODEL_PATH = \"models/tensorflow/cifar10_cnn.keras\"\nCLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\n# -------------------------\n# PyTorch Model Wrapper\n# -------------------------\nclass PyTorchResNetModel:\n    def __init__(self):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "CLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\n# -------------------------\n# PyTorch Model Wrapper\n# -------------------------\nclass PyTorchResNetModel:\n    def __init__(self):\n        self.model = None",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "pytorch_model",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "pytorch_model = PyTorchResNetModel()\npytorch_model.load()\ntf_model = TensorFlowCIFAR10Model()\ntf_model.load()\n# -------------------------\n# Prediction Function\n# -------------------------\ndef predict_image(image, backend):\n    if image is None:\n        raise gr.Error(\"Please upload an image\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "tf_model",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "tf_model = TensorFlowCIFAR10Model()\ntf_model.load()\n# -------------------------\n# Prediction Function\n# -------------------------\ndef predict_image(image, backend):\n    if image is None:\n        raise gr.Error(\"Please upload an image\")\n    if isinstance(image, np.ndarray):\n        image = Image.fromarray(image)",
+        "detail": "app",
+        "documentation": {}
+    }
+]
