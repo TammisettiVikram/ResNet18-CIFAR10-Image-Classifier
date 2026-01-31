@@ -162,7 +162,7 @@ with gr.Blocks(title="CIFAR-10 Dual Backend Classifier") as demo:
             classify_btn = gr.Button("Classify")
 
         with gr.Column():
-            output = gr.JSON(label="Predictions")
+            output = gr.Label(num_top_classes=5, label="Predictions")
 
     classify_btn.click(
         fn=predict_image,
