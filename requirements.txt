@@ -1,26 +1,26 @@
 # Web framework (optional if you expose FastAPI backend)
-fastapi==0.110.0
-uvicorn[standard]==0.27.0
-sqlalchemy==2.0.27
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+sqlalchemy>=2.0.30
 
 # Core ML libraries
-torch==2.5.0
-torchvision==0.25.0
-tensorflow==2.20.0
+torch>=2.5.0
+torchvision>=0.25.0
+tensorflow>=2.20.0
 
 # Image + numerical utilities
-Pillow==10.2.0
-numpy==1.26.4
+Pillow>=10.2.0
+numpy>=1.26.4
 
 # File upload handling
 python-multipart>=0.0.9
 
 # Hugging Face + Gradio UI
-gradio==4.50.0
-huggingface_hub==0.25.0
+gradio>=4.50.0
+huggingface_hub>=0.25.0
 
 # Recommended extras for Spaces stability
 # pin protobuf to avoid TF conflicts
-protobuf==4.25.2
+protobuf>=4.25.2
 # pin typing-extensions for PyTorch compatibility
-typing-extensions==4.12.2
+typing-extensions>=4.12.2
