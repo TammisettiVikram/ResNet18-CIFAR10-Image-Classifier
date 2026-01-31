@@ -93,11 +93,25 @@ class TensorFlowCIFAR10Model:
             arr = np.expand_dims(arr, axis=0)
 
             probs = self.model.predict(arr, verbose=0)
-            
-            # Handle case where model returns nested array
-            if probs.ndim > 1:
-                probs = probs[0]
-            
+
+            # Convert to 1D numpy array
+            probs = np.asarray(probs).squeeze()
+
+            # If output doesn't look like probabilities (sum far from 1), apply softmax
+            s = float(np.sum(probs))
+            if not np.isfinite(s) or s <= 0 or abs(s - 1.0) > 1e-3:
+                # treat as logits -> apply stable softmax
+                exp = np.exp(probs - np.max(probs))
+                probs = exp / np.sum(exp)
+
+            # Debug info
+            try:
+                top_debug_idx = np.argsort(probs)[-5:][::-1]
+                debug_str = ", ".join([f"{CLASS_NAMES[i]}:{probs[i]:.3f}" for i in top_debug_idx])
+                print(f"🔎 TensorFlow prediction debug — sum={probs.sum():.6f}, top5={debug_str}")
+            except Exception:
+                print(f"🔎 TensorFlow prediction debug — sum={probs.sum():.6f}")
+
             top5_idx = np.argsort(probs)[-5:][::-1]
 
             return {
