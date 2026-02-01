@@ -1,20 +1,143 @@
 [
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageOps",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageOps",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "importlib.util",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "importlib.util",
+        "description": "importlib.util",
+        "detail": "importlib.util",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "os",
         "description": "os",
         "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "gradio",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "gradio",
-        "description": "gradio",
-        "detail": "gradio",
         "documentation": {}
     },
     {
@@ -45,6 +168,14 @@
         "documentation": {}
     },
     {
+        "label": "CIFAR10",
+        "importPath": "torchvision.datasets",
+        "description": "torchvision.datasets",
+        "isExtraImport": true,
+        "detail": "torchvision.datasets",
+        "documentation": {}
+    },
+    {
         "label": "tensorflow",
         "kind": 6,
         "isExtraImport": true,
@@ -54,20 +185,506 @@
         "documentation": {}
     },
     {
-        "label": "numpy",
+        "label": "requests",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "numpy",
-        "description": "numpy",
-        "detail": "numpy",
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
         "documentation": {}
     },
     {
-        "label": "Image",
-        "importPath": "PIL",
-        "description": "PIL",
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
         "isExtraImport": true,
-        "detail": "PIL",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "gradio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "gradio",
+        "description": "gradio",
+        "detail": "gradio",
+        "documentation": {}
+    },
+    {
+        "label": "fit_32",
+        "kind": 2,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "def fit_32(img):\n    im = img.convert('RGB')\n    return np.array(ImageOps.fit(im, (32,32), method=resample)).astype('float32')\ndef resize_32(img):\n    im = img.convert('RGB').resize((32,32), resample)\n    return np.array(im).astype('float32')\nfor scale_name in scales.keys():\n    variants.append(('fit', scale_name, False))\n    variants.append(('resize', scale_name, False))\n    variants.append(('fit', scale_name, True))",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "resize_32",
+        "kind": 2,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "def resize_32(img):\n    im = img.convert('RGB').resize((32,32), resample)\n    return np.array(im).astype('float32')\nfor scale_name in scales.keys():\n    variants.append(('fit', scale_name, False))\n    variants.append(('resize', scale_name, False))\n    variants.append(('fit', scale_name, True))\n    variants.append(('resize', scale_name, True))\nresults = {}\nfor fname in TARGETS:",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "APP_PATH",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "APP_PATH = Path(__file__).resolve().parents[1] / \"app.py\"\nspec = importlib.util.spec_from_file_location(\"app\", str(APP_PATH))\napp = importlib.util.module_from_spec(spec)\nsys.modules[\"app\"] = app\nspec.loader.exec_module(app)\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nTARGETS = [\"OIP.jpg\", \"OIP (3).jpg\"]\nOUT_JSON = Path(\"tests/ablation_results.json\")",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "spec",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "spec = importlib.util.spec_from_file_location(\"app\", str(APP_PATH))\napp = importlib.util.module_from_spec(spec)\nsys.modules[\"app\"] = app\nspec.loader.exec_module(app)\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nTARGETS = [\"OIP.jpg\", \"OIP (3).jpg\"]\nOUT_JSON = Path(\"tests/ablation_results.json\")\n# prepare resample",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "app = importlib.util.module_from_spec(spec)\nsys.modules[\"app\"] = app\nspec.loader.exec_module(app)\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nTARGETS = [\"OIP.jpg\", \"OIP (3).jpg\"]\nOUT_JSON = Path(\"tests/ablation_results.json\")\n# prepare resample\ntry:",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "sys.modules[\"app\"]",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "sys.modules[\"app\"] = app\nspec.loader.exec_module(app)\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nTARGETS = [\"OIP.jpg\", \"OIP (3).jpg\"]\nOUT_JSON = Path(\"tests/ablation_results.json\")\n# prepare resample\ntry:\n    resample = Image.Resampling.LANCZOS",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "tf_model",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "tf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nTARGETS = [\"OIP.jpg\", \"OIP (3).jpg\"]\nOUT_JSON = Path(\"tests/ablation_results.json\")\n# prepare resample\ntry:\n    resample = Image.Resampling.LANCZOS\nexcept Exception:\n    if hasattr(Image, 'LANCZOS'):",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "CLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nTARGETS = [\"OIP.jpg\", \"OIP (3).jpg\"]\nOUT_JSON = Path(\"tests/ablation_results.json\")\n# prepare resample\ntry:\n    resample = Image.Resampling.LANCZOS\nexcept Exception:\n    if hasattr(Image, 'LANCZOS'):\n        resample = Image.LANCZOS",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_DIR",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "IMG_DIR = Path(\"tests/images\")\nTARGETS = [\"OIP.jpg\", \"OIP (3).jpg\"]\nOUT_JSON = Path(\"tests/ablation_results.json\")\n# prepare resample\ntry:\n    resample = Image.Resampling.LANCZOS\nexcept Exception:\n    if hasattr(Image, 'LANCZOS'):\n        resample = Image.LANCZOS\n    elif hasattr(Image, 'ANTIALIAS'):",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "TARGETS",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "TARGETS = [\"OIP.jpg\", \"OIP (3).jpg\"]\nOUT_JSON = Path(\"tests/ablation_results.json\")\n# prepare resample\ntry:\n    resample = Image.Resampling.LANCZOS\nexcept Exception:\n    if hasattr(Image, 'LANCZOS'):\n        resample = Image.LANCZOS\n    elif hasattr(Image, 'ANTIALIAS'):\n        resample = Image.ANTIALIAS",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "OUT_JSON",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "OUT_JSON = Path(\"tests/ablation_results.json\")\n# prepare resample\ntry:\n    resample = Image.Resampling.LANCZOS\nexcept Exception:\n    if hasattr(Image, 'LANCZOS'):\n        resample = Image.LANCZOS\n    elif hasattr(Image, 'ANTIALIAS'):\n        resample = Image.ANTIALIAS\n    else:",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "scales",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "scales = {\n    'scale_0_1': lambda arr: arr / 255.0,\n    'scale_127': lambda arr: (arr / 127.5) - 1.0,\n    'scale_255': lambda arr: arr,  # raw\n}\nvariants = []\n# variant generators: name, function that returns numpy batch (1,32,32,3)\ndef fit_32(img):\n    im = img.convert('RGB')\n    return np.array(ImageOps.fit(im, (32,32), method=resample)).astype('float32')",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "variants",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "variants = []\n# variant generators: name, function that returns numpy batch (1,32,32,3)\ndef fit_32(img):\n    im = img.convert('RGB')\n    return np.array(ImageOps.fit(im, (32,32), method=resample)).astype('float32')\ndef resize_32(img):\n    im = img.convert('RGB').resize((32,32), resample)\n    return np.array(im).astype('float32')\nfor scale_name in scales.keys():\n    variants.append(('fit', scale_name, False))",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "tests.ablation_analysis",
+        "description": "tests.ablation_analysis",
+        "peekOfCode": "results = {}\nfor fname in TARGETS:\n    p = IMG_DIR / fname\n    if not p.exists():\n        print(f\"Skipping {fname}: file not found in {IMG_DIR}\")\n        continue\n    img = Image.open(p).convert('RGB')\n    results[fname] = {}\n    for kind, scale_name, do_flip in variants:\n        if kind == 'fit':",
+        "detail": "tests.ablation_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "load_pytorch_model",
+        "kind": 2,
+        "importPath": "tests.compare_models",
+        "description": "tests.compare_models",
+        "peekOfCode": "def load_pytorch_model():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)\n    state_dict = torch.load(PYTORCH_MODEL_PATH, map_location=\"cpu\")\n    model.load_state_dict(state_dict)\n    model.eval()\n    transform = T.Compose([\n        T.Resize((224, 224)),\n        T.ToTensor(),\n        T.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),",
+        "detail": "tests.compare_models",
+        "documentation": {}
+    },
+    {
+        "label": "load_tf_model",
+        "kind": 2,
+        "importPath": "tests.compare_models",
+        "description": "tests.compare_models",
+        "peekOfCode": "def load_tf_model():\n    model = tf.keras.models.load_model(TF_MODEL_PATH)\n    return model\ndef eval_models(n_samples=200):\n    pt_model, pt_transform = load_pytorch_model()\n    tf_model = load_tf_model()\n    dataset = CIFAR10(root=\"./data\", train=False, download=True)\n    pt_correct = 0\n    tf_correct = 0\n    total = 0",
+        "detail": "tests.compare_models",
+        "documentation": {}
+    },
+    {
+        "label": "eval_models",
+        "kind": 2,
+        "importPath": "tests.compare_models",
+        "description": "tests.compare_models",
+        "peekOfCode": "def eval_models(n_samples=200):\n    pt_model, pt_transform = load_pytorch_model()\n    tf_model = load_tf_model()\n    dataset = CIFAR10(root=\"./data\", train=False, download=True)\n    pt_correct = 0\n    tf_correct = 0\n    total = 0\n    mismatches = []\n    for idx in range(min(n_samples, len(dataset))):\n        img, label = dataset[idx]",
+        "detail": "tests.compare_models",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT",
+        "kind": 5,
+        "importPath": "tests.compare_models",
+        "description": "tests.compare_models",
+        "peekOfCode": "ROOT = os.path.dirname(os.path.dirname(__file__))\nPYTORCH_MODEL_PATH = os.path.join(ROOT, \"models\", \"pytorch\", \"resnet18_cifar10.pt\")\nTF_MODEL_PATH = os.path.join(ROOT, \"models\", \"tensorflow\", \"cifar10_cnn.keras\")\nCLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\ndef load_pytorch_model():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)",
+        "detail": "tests.compare_models",
+        "documentation": {}
+    },
+    {
+        "label": "PYTORCH_MODEL_PATH",
+        "kind": 5,
+        "importPath": "tests.compare_models",
+        "description": "tests.compare_models",
+        "peekOfCode": "PYTORCH_MODEL_PATH = os.path.join(ROOT, \"models\", \"pytorch\", \"resnet18_cifar10.pt\")\nTF_MODEL_PATH = os.path.join(ROOT, \"models\", \"tensorflow\", \"cifar10_cnn.keras\")\nCLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\ndef load_pytorch_model():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)\n    state_dict = torch.load(PYTORCH_MODEL_PATH, map_location=\"cpu\")",
+        "detail": "tests.compare_models",
+        "documentation": {}
+    },
+    {
+        "label": "TF_MODEL_PATH",
+        "kind": 5,
+        "importPath": "tests.compare_models",
+        "description": "tests.compare_models",
+        "peekOfCode": "TF_MODEL_PATH = os.path.join(ROOT, \"models\", \"tensorflow\", \"cifar10_cnn.keras\")\nCLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\ndef load_pytorch_model():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)\n    state_dict = torch.load(PYTORCH_MODEL_PATH, map_location=\"cpu\")\n    model.load_state_dict(state_dict)",
+        "detail": "tests.compare_models",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "tests.compare_models",
+        "description": "tests.compare_models",
+        "peekOfCode": "CLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\ndef load_pytorch_model():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)\n    state_dict = torch.load(PYTORCH_MODEL_PATH, map_location=\"cpu\")\n    model.load_state_dict(state_dict)\n    model.eval()",
+        "detail": "tests.compare_models",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_PATH",
+        "kind": 5,
+        "importPath": "tests.inspect_tf_model",
+        "description": "tests.inspect_tf_model",
+        "peekOfCode": "MODEL_PATH = \"models/tensorflow/cifar10_cnn.keras\"\nprint(\"Loading model from:\", MODEL_PATH)\nmodel = tf.keras.models.load_model(MODEL_PATH)\nprint(\"Model loaded. Input shape:\", model.input_shape)\nprint(\"Model dtype:\", model.input.dtype)\n# Print layer types and look for Rescaling/Normalization/Lambda\nfor i, layer in enumerate(model.layers[:20]):\n    print(i, layer.name, type(layer).__name__)\n    if isinstance(layer, tf.keras.layers.Rescaling):\n        try:",
+        "detail": "tests.inspect_tf_model",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "tests.inspect_tf_model",
+        "description": "tests.inspect_tf_model",
+        "peekOfCode": "model = tf.keras.models.load_model(MODEL_PATH)\nprint(\"Model loaded. Input shape:\", model.input_shape)\nprint(\"Model dtype:\", model.input.dtype)\n# Print layer types and look for Rescaling/Normalization/Lambda\nfor i, layer in enumerate(model.layers[:20]):\n    print(i, layer.name, type(layer).__name__)\n    if isinstance(layer, tf.keras.layers.Rescaling):\n        try:\n            print(\"  -> Rescaling scale:\", layer.scale)\n        except Exception:",
+        "detail": "tests.inspect_tf_model",
+        "documentation": {}
+    },
+    {
+        "label": "x_rand",
+        "kind": 5,
+        "importPath": "tests.inspect_tf_model",
+        "description": "tests.inspect_tf_model",
+        "peekOfCode": "x_rand = np.random.rand(1, 32, 32, 3).astype(np.float32)\ntry:\n    out_01 = model.predict(x_rand, verbose=0)\n    out_255 = model.predict(x_rand * 255.0, verbose=0)\n    # Also test common preprocessing: (x/127.5)-1\n    out_127 = model.predict((x_rand * 255.0) / 127.5 - 1.0, verbose=0)\n    def summarize(o):\n        o = np.asarray(o).squeeze()\n        return {\"sum\": float(np.sum(o)), \"max\": float(np.max(o)), \"argmax\": int(np.argmax(o))}\n    print(\"Random input test summaries:\")",
+        "detail": "tests.inspect_tf_model",
+        "documentation": {}
+    },
+    {
+        "label": "load_pytorch",
+        "kind": 2,
+        "importPath": "tests.predict_single",
+        "description": "tests.predict_single",
+        "peekOfCode": "def load_pytorch():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)\n    state = torch.load(PYTORCH_MODEL_PATH, map_location=\"cpu\")\n    model.load_state_dict(state)\n    model.eval()\n    transform = T.Compose([\n        T.Resize((224, 224)),\n        T.ToTensor(),\n        T.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),",
+        "detail": "tests.predict_single",
+        "documentation": {}
+    },
+    {
+        "label": "load_tf",
+        "kind": 2,
+        "importPath": "tests.predict_single",
+        "description": "tests.predict_single",
+        "peekOfCode": "def load_tf():\n    model = tf.keras.models.load_model(TF_MODEL_PATH)\n    return model\ndef topk_from_probs(probs, k=5):\n    idx = np.argsort(probs)[-k:][::-1]\n    return [(CLASS_NAMES[i], float(probs[i])) for i in idx]\ndef predict_single(image_path):\n    img = Image.open(image_path).convert(\"RGB\")\n    # PyTorch\n    pt_model, pt_transform = load_pytorch()",
+        "detail": "tests.predict_single",
+        "documentation": {}
+    },
+    {
+        "label": "topk_from_probs",
+        "kind": 2,
+        "importPath": "tests.predict_single",
+        "description": "tests.predict_single",
+        "peekOfCode": "def topk_from_probs(probs, k=5):\n    idx = np.argsort(probs)[-k:][::-1]\n    return [(CLASS_NAMES[i], float(probs[i])) for i in idx]\ndef predict_single(image_path):\n    img = Image.open(image_path).convert(\"RGB\")\n    # PyTorch\n    pt_model, pt_transform = load_pytorch()\n    x = pt_transform(img).unsqueeze(0)\n    with torch.no_grad():\n        logits = pt_model(x)",
+        "detail": "tests.predict_single",
+        "documentation": {}
+    },
+    {
+        "label": "predict_single",
+        "kind": 2,
+        "importPath": "tests.predict_single",
+        "description": "tests.predict_single",
+        "peekOfCode": "def predict_single(image_path):\n    img = Image.open(image_path).convert(\"RGB\")\n    # PyTorch\n    pt_model, pt_transform = load_pytorch()\n    x = pt_transform(img).unsqueeze(0)\n    with torch.no_grad():\n        logits = pt_model(x)\n        pt_probs = torch.softmax(logits, dim=1)[0].cpu().numpy()\n    print(\"\\n--- PyTorch (ResNet18) ---\")\n    print(\"probs sum:\", float(pt_probs.sum()))",
+        "detail": "tests.predict_single",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT",
+        "kind": 5,
+        "importPath": "tests.predict_single",
+        "description": "tests.predict_single",
+        "peekOfCode": "ROOT = os.path.dirname(os.path.dirname(__file__))\nPYTORCH_MODEL_PATH = os.path.join(ROOT, \"models\", \"pytorch\", \"resnet18_cifar10.pt\")\nTF_MODEL_PATH = os.path.join(ROOT, \"models\", \"tensorflow\", \"cifar10_cnn.keras\")\nCLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\ndef load_pytorch():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)",
+        "detail": "tests.predict_single",
+        "documentation": {}
+    },
+    {
+        "label": "PYTORCH_MODEL_PATH",
+        "kind": 5,
+        "importPath": "tests.predict_single",
+        "description": "tests.predict_single",
+        "peekOfCode": "PYTORCH_MODEL_PATH = os.path.join(ROOT, \"models\", \"pytorch\", \"resnet18_cifar10.pt\")\nTF_MODEL_PATH = os.path.join(ROOT, \"models\", \"tensorflow\", \"cifar10_cnn.keras\")\nCLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\ndef load_pytorch():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)\n    state = torch.load(PYTORCH_MODEL_PATH, map_location=\"cpu\")",
+        "detail": "tests.predict_single",
+        "documentation": {}
+    },
+    {
+        "label": "TF_MODEL_PATH",
+        "kind": 5,
+        "importPath": "tests.predict_single",
+        "description": "tests.predict_single",
+        "peekOfCode": "TF_MODEL_PATH = os.path.join(ROOT, \"models\", \"tensorflow\", \"cifar10_cnn.keras\")\nCLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\ndef load_pytorch():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)\n    state = torch.load(PYTORCH_MODEL_PATH, map_location=\"cpu\")\n    model.load_state_dict(state)",
+        "detail": "tests.predict_single",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "tests.predict_single",
+        "description": "tests.predict_single",
+        "peekOfCode": "CLASS_NAMES = [\n    \"airplane\", \"automobile\", \"bird\", \"cat\", \"deer\",\n    \"dog\", \"frog\", \"horse\", \"ship\", \"truck\"\n]\ndef load_pytorch():\n    model = models.resnet18(weights=None)\n    model.fc = torch.nn.Linear(model.fc.in_features, 10)\n    state = torch.load(PYTORCH_MODEL_PATH, map_location=\"cpu\")\n    model.load_state_dict(state)\n    model.eval()",
+        "detail": "tests.predict_single",
+        "documentation": {}
+    },
+    {
+        "label": "APP_PATH",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "APP_PATH = Path(__file__).resolve().parents[1] / \"app.py\"\nspec = importlib.util.spec_from_file_location(\"app\", str(APP_PATH))\napp = importlib.util.module_from_spec(spec)\nsys.modules[\"app\"] = app\nspec.loader.exec_module(app)\npytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nOUT_DIR = Path(\"tests/images\")\nOUT_DIR.mkdir(parents=True, exist_ok=True)",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "spec",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "spec = importlib.util.spec_from_file_location(\"app\", str(APP_PATH))\napp = importlib.util.module_from_spec(spec)\nsys.modules[\"app\"] = app\nspec.loader.exec_module(app)\npytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nOUT_DIR = Path(\"tests/images\")\nOUT_DIR.mkdir(parents=True, exist_ok=True)\n# List of test images (public URLs) and expected CIFAR-10 label (if known)",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "app = importlib.util.module_from_spec(spec)\nsys.modules[\"app\"] = app\nspec.loader.exec_module(app)\npytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nOUT_DIR = Path(\"tests/images\")\nOUT_DIR.mkdir(parents=True, exist_ok=True)\n# List of test images (public URLs) and expected CIFAR-10 label (if known)\nTEST_IMAGES = [",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "sys.modules[\"app\"]",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "sys.modules[\"app\"] = app\nspec.loader.exec_module(app)\npytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nOUT_DIR = Path(\"tests/images\")\nOUT_DIR.mkdir(parents=True, exist_ok=True)\n# List of test images (public URLs) and expected CIFAR-10 label (if known)\nTEST_IMAGES = [\n    # (url, expected_label)",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "pytorch_model",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "pytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nOUT_DIR = Path(\"tests/images\")\nOUT_DIR.mkdir(parents=True, exist_ok=True)\n# List of test images (public URLs) and expected CIFAR-10 label (if known)\nTEST_IMAGES = [\n    # (url, expected_label)\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg\", \"cat\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3c/Golden_Retriever_medium-to-light_coat.jpg\", \"dog\"),",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "tf_model",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "tf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nOUT_DIR = Path(\"tests/images\")\nOUT_DIR.mkdir(parents=True, exist_ok=True)\n# List of test images (public URLs) and expected CIFAR-10 label (if known)\nTEST_IMAGES = [\n    # (url, expected_label)\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg\", \"cat\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3c/Golden_Retriever_medium-to-light_coat.jpg\", \"dog\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/7/7b/Aeroplane_Airbus_A320.jpg\", \"airplane\"),",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "CLASS_NAMES = app.CLASS_NAMES\nOUT_DIR = Path(\"tests/images\")\nOUT_DIR.mkdir(parents=True, exist_ok=True)\n# List of test images (public URLs) and expected CIFAR-10 label (if known)\nTEST_IMAGES = [\n    # (url, expected_label)\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg\", \"cat\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3c/Golden_Retriever_medium-to-light_coat.jpg\", \"dog\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/7/7b/Aeroplane_Airbus_A320.jpg\", \"airplane\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/6/6b/Truck-tractor-01.jpg\", \"truck\"),",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "OUT_DIR",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "OUT_DIR = Path(\"tests/images\")\nOUT_DIR.mkdir(parents=True, exist_ok=True)\n# List of test images (public URLs) and expected CIFAR-10 label (if known)\nTEST_IMAGES = [\n    # (url, expected_label)\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg\", \"cat\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3c/Golden_Retriever_medium-to-light_coat.jpg\", \"dog\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/7/7b/Aeroplane_Airbus_A320.jpg\", \"airplane\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/6/6b/Truck-tractor-01.jpg\", \"truck\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/4/42/Hippopotamus_in_water.jpg\", \"deer\"),",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_IMAGES",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "TEST_IMAGES = [\n    # (url, expected_label)\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg\", \"cat\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/3/3c/Golden_Retriever_medium-to-light_coat.jpg\", \"dog\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/7/7b/Aeroplane_Airbus_A320.jpg\", \"airplane\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/6/6b/Truck-tractor-01.jpg\", \"truck\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/4/42/Hippopotamus_in_water.jpg\", \"deer\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/5/5f/Frog_in_pond.jpg\", \"frog\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/1/12/Horse_portrait.jpg\", \"horse\"),\n    (\"https://upload.wikimedia.org/wikipedia/commons/9/9a/USS_Arizona_%28BB-39%29_sinking.jpg\", \"ship\"),",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "results = []\nfor i, (url, expected) in enumerate(TEST_IMAGES):\n    name = f\"img_{i}.jpg\"\n    path = OUT_DIR / name\n    print(f\"Downloading {url} -> {path} ...\")\n    try:\n        r = requests.get(url, timeout=15)\n        r.raise_for_status()\n        img = Image.open(BytesIO(r.content)).convert(\"RGB\")\n        img.save(path)",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "out_json",
+        "kind": 5,
+        "importPath": "tests.run_batch_images",
+        "description": "tests.run_batch_images",
+        "peekOfCode": "out_json = Path(\"tests/batch_results.json\")\nwith open(out_json, \"w\") as f:\n    json.dump(results, f, indent=2)\n# Print concise table\nprint(\"\\nResults:\")\nfor r in results:\n    print(f\"{Path(r['file']).name}: expected={r['expected']}\")\n    print(f\"  PyTorch -> {r['pytorch']['label']} ({r['pytorch']['conf']:.3f}) correct={r['pytorch']['correct']}\")\n    print(f\"  TensorFlow -> {r['tensorflow']['label']} ({r['tensorflow']['conf']:.3f}) correct={r['tensorflow']['correct']}\")\nprint(f\"\\nSaved detailed results to {out_json}\")",
+        "detail": "tests.run_batch_images",
+        "documentation": {}
+    },
+    {
+        "label": "APP_PATH",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "APP_PATH = Path(__file__).resolve().parents[1] / \"app.py\"\nspec = importlib.util.spec_from_file_location(\"app\", str(APP_PATH))\napp = importlib.util.module_from_spec(spec)\nsys.modules[\"app\"] = app\nspec.loader.exec_module(app)\npytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nOUT_JSON = Path(\"tests/batch_results_local.json\")",
+        "detail": "tests.run_local_images",
+        "documentation": {}
+    },
+    {
+        "label": "spec",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "spec = importlib.util.spec_from_file_location(\"app\", str(APP_PATH))\napp = importlib.util.module_from_spec(spec)\nsys.modules[\"app\"] = app\nspec.loader.exec_module(app)\npytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nOUT_JSON = Path(\"tests/batch_results_local.json\")\nresults = []",
+        "detail": "tests.run_local_images",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "app = importlib.util.module_from_spec(spec)\nsys.modules[\"app\"] = app\nspec.loader.exec_module(app)\npytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nOUT_JSON = Path(\"tests/batch_results_local.json\")\nresults = []\nfor img_path in sorted(IMG_DIR.iterdir()):",
+        "detail": "tests.run_local_images",
+        "documentation": {}
+    },
+    {
+        "label": "sys.modules[\"app\"]",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "sys.modules[\"app\"] = app\nspec.loader.exec_module(app)\npytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nOUT_JSON = Path(\"tests/batch_results_local.json\")\nresults = []\nfor img_path in sorted(IMG_DIR.iterdir()):\n    if img_path.suffix.lower() not in (\".jpg\", \".jpeg\", \".png\", \".bmp\", \".gif\"):",
+        "detail": "tests.run_local_images",
+        "documentation": {}
+    },
+    {
+        "label": "pytorch_model",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "pytorch_model = app.pytorch_model\ntf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nOUT_JSON = Path(\"tests/batch_results_local.json\")\nresults = []\nfor img_path in sorted(IMG_DIR.iterdir()):\n    if img_path.suffix.lower() not in (\".jpg\", \".jpeg\", \".png\", \".bmp\", \".gif\"):\n        continue\n    try:",
+        "detail": "tests.run_local_images",
+        "documentation": {}
+    },
+    {
+        "label": "tf_model",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "tf_model = app.tf_model\nCLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nOUT_JSON = Path(\"tests/batch_results_local.json\")\nresults = []\nfor img_path in sorted(IMG_DIR.iterdir()):\n    if img_path.suffix.lower() not in (\".jpg\", \".jpeg\", \".png\", \".bmp\", \".gif\"):\n        continue\n    try:\n        img = Image.open(img_path).convert(\"RGB\")",
+        "detail": "tests.run_local_images",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "CLASS_NAMES = app.CLASS_NAMES\nIMG_DIR = Path(\"tests/images\")\nOUT_JSON = Path(\"tests/batch_results_local.json\")\nresults = []\nfor img_path in sorted(IMG_DIR.iterdir()):\n    if img_path.suffix.lower() not in (\".jpg\", \".jpeg\", \".png\", \".bmp\", \".gif\"):\n        continue\n    try:\n        img = Image.open(img_path).convert(\"RGB\")\n    except Exception as e:",
+        "detail": "tests.run_local_images",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_DIR",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "IMG_DIR = Path(\"tests/images\")\nOUT_JSON = Path(\"tests/batch_results_local.json\")\nresults = []\nfor img_path in sorted(IMG_DIR.iterdir()):\n    if img_path.suffix.lower() not in (\".jpg\", \".jpeg\", \".png\", \".bmp\", \".gif\"):\n        continue\n    try:\n        img = Image.open(img_path).convert(\"RGB\")\n    except Exception as e:\n        print(f\"Failed to open {img_path}: {e}\")",
+        "detail": "tests.run_local_images",
+        "documentation": {}
+    },
+    {
+        "label": "OUT_JSON",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "OUT_JSON = Path(\"tests/batch_results_local.json\")\nresults = []\nfor img_path in sorted(IMG_DIR.iterdir()):\n    if img_path.suffix.lower() not in (\".jpg\", \".jpeg\", \".png\", \".bmp\", \".gif\"):\n        continue\n    try:\n        img = Image.open(img_path).convert(\"RGB\")\n    except Exception as e:\n        print(f\"Failed to open {img_path}: {e}\")\n        continue",
+        "detail": "tests.run_local_images",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "tests.run_local_images",
+        "description": "tests.run_local_images",
+        "peekOfCode": "results = []\nfor img_path in sorted(IMG_DIR.iterdir()):\n    if img_path.suffix.lower() not in (\".jpg\", \".jpeg\", \".png\", \".bmp\", \".gif\"):\n        continue\n    try:\n        img = Image.open(img_path).convert(\"RGB\")\n    except Exception as e:\n        print(f\"Failed to open {img_path}: {e}\")\n        continue\n    try:",
+        "detail": "tests.run_local_images",
         "documentation": {}
     },
     {
@@ -84,7 +701,7 @@
         "kind": 6,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "class TensorFlowCIFAR10Model:\n    def __init__(self):\n        self.model = None\n    def load(self):\n        try:\n            self.model = tf.keras.models.load_model(\n                \"models/tensorflow/cifar10_cnn.keras\"\n            )\n            print(\"✅ TensorFlow model loaded successfully\")\n        except Exception as e:",
+        "peekOfCode": "class TensorFlowCIFAR10Model:\n    def __init__(self):\n        self.model = None\n    def preprocess(self, image: Image.Image, size: int = 32):\n        \"\"\"Preprocess image for CIFAR-10 TF model.\n        Uses ImageOps.fit to preserve aspect ratio while resizing and center-cropping.\n        Returns a batch array shape (1, size, size, 3) scaled to [0,1].\n        Handles Pillow API differences where `ANTIALIAS` was moved/renamed.\n        \"\"\"\n        img = image.convert(\"RGB\")",
         "detail": "app",
         "documentation": {}
     },
@@ -93,7 +710,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def predict_image(image, backend):\n    if image is None:\n        raise gr.Error(\"Please upload an image\")\n    if isinstance(image, np.ndarray):\n        image = Image.fromarray(image)\n    if backend == \"PyTorch\":\n        return pytorch_model.predict_top5(image)\n    elif backend == \"TensorFlow\":\n        return tf_model.predict_top5(image)\n    else:",
+        "peekOfCode": "def predict_image(image, backend, show_raw=False):\n    if image is None:\n        raise gr.Error(\"Please upload an image\")\n    if isinstance(image, np.ndarray):\n        image = Image.fromarray(image)\n    # compute full probabilities and top5 mapping for consistent UI outputs\n    if backend == \"PyTorch\":\n        probs = pytorch_model.predict_probs(image)\n    elif backend == \"TensorFlow\":\n        # tf_model.predict_top5 previously returned top5 only; use predict_top5 internals",
         "detail": "app",
         "documentation": {}
     },
@@ -129,7 +746,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "pytorch_model = PyTorchResNetModel()\npytorch_model.load()\ntf_model = TensorFlowCIFAR10Model()\ntf_model.load()\n# -------------------------\n# Prediction Function\n# -------------------------\ndef predict_image(image, backend):\n    if image is None:\n        raise gr.Error(\"Please upload an image\")",
+        "peekOfCode": "pytorch_model = PyTorchResNetModel()\npytorch_model.load()\ntf_model = TensorFlowCIFAR10Model()\ntf_model.load()\n# -------------------------\n# Prediction Function\n# -------------------------\ndef predict_image(image, backend, show_raw=False):\n    if image is None:\n        raise gr.Error(\"Please upload an image\")",
         "detail": "app",
         "documentation": {}
     },
@@ -138,7 +755,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "tf_model = TensorFlowCIFAR10Model()\ntf_model.load()\n# -------------------------\n# Prediction Function\n# -------------------------\ndef predict_image(image, backend):\n    if image is None:\n        raise gr.Error(\"Please upload an image\")\n    if isinstance(image, np.ndarray):\n        image = Image.fromarray(image)",
+        "peekOfCode": "tf_model = TensorFlowCIFAR10Model()\ntf_model.load()\n# -------------------------\n# Prediction Function\n# -------------------------\ndef predict_image(image, backend, show_raw=False):\n    if image is None:\n        raise gr.Error(\"Please upload an image\")\n    if isinstance(image, np.ndarray):\n        image = Image.fromarray(image)",
         "detail": "app",
         "documentation": {}
     }

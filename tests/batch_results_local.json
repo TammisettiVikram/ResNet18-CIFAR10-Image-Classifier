@@ -1,0 +1,57 @@
+[
+  {
+    "file": "tests\\images\\OIP (1).jpg",
+    "pytorch": {
+      "label": "frog",
+      "conf": 0.9986246824264526
+    },
+    "tensorflow": {
+      "label": "frog",
+      "conf": 0.9977633357048035
+    }
+  },
+  {
+    "file": "tests\\images\\OIP (2).jpg",
+    "pytorch": {
+      "label": "cat",
+      "conf": 0.9999831914901733
+    },
+    "tensorflow": {
+      "label": "cat",
+      "conf": 0.6249176263809204
+    }
+  },
+  {
+    "file": "tests\\images\\OIP (3).jpg",
+    "pytorch": {
+      "label": "dog",
+      "conf": 0.9999780654907227
+    },
+    "tensorflow": {
+      "label": "frog",
+      "conf": 0.45990440249443054
+    }
+  },
+  {
+    "file": "tests\\images\\OIP (4).jpg",
+    "pytorch": {
+      "label": "airplane",
+      "conf": 0.9998015761375427
+    },
+    "tensorflow": {
+      "label": "airplane",
+      "conf": 0.9854414463043213
+    }
+  },
+  {
+    "file": "tests\\images\\OIP.jpg",
+    "pytorch": {
+      "label": "horse",
+      "conf": 0.8798277974128723
+    },
+    "tensorflow": {
+      "label": "dog",
+      "conf": 0.4151097536087036
+    }
+  }
+]
